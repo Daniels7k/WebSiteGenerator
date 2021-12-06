@@ -2,8 +2,12 @@ body{
     margin: 0;
     padding: 0;
 }
+p{
+    padding: 0px;
+    margin: 0px;
+}
 
-#header{
+#background-header{
     background-color: brown;
     width: 100%;
     height: 30vh;
@@ -20,4 +24,69 @@ body{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+nav{
+    background-color: black;
+    width: 100%;
+}
+ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+li {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 15px
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#mid-lane-container{
+    margin-top: 50px;
+    background-color: yellow;
+    height: 70vh;
+}
+#image{
+    display: inline-block;
+    background-color: red;
+    height: 300px;
+    width: 250px;
+}
+#sobre{
+    background-color: yellow;
+    display: inline-block;
+    width: 250px;
+}
+#projetos{
+text-align: center;
+color: white;
+background-color: blue;
+}
+.project-square{
+    display: inline-block;
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 5%;
+    height: 200px;
+    width: 200px;
+}
+footer{
+    color: white;
+    text-align: center;
+    background-color:black;
+}
+img{
+    width: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#github{
+background-color: white;
+border-radius: 8px;
 }
