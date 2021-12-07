@@ -1,4 +1,5 @@
 body{
+    font-family: 'Fira Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -6,14 +7,22 @@ p{
     padding: 0px;
     margin: 0px;
 }
-
+h1{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin: 0;
+    padding: 0;
+}
+/* Header */
 #background-header{
-    background-color: brown;
+    background-image: url("./assets/backgrounds/mountain.jpg");
     width: 100%;
-    height: 30vh;
+    background-size: cover;
+    height: 90vh;
     position: relative;
 }
-
 #container-nomes{
     color: white;
     text-align: center;
@@ -24,69 +33,103 @@ p{
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    font-size:xx-large;
 }
 
+/* Navegador */
 nav{
-    background-color: black;
+    font-family: 'Lato', sans-serif;
+    background-color: #0E243B;
+    height: 8vh;
     width: 100%;
+    padding-top: 10px;
+    position: sticky;
+    top:0;
+    
 }
-ul {
+nav ul {
     text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-li {
+nav li {
     display: inline-block;
+    margin: auto;
     margin-left: 5%;
     margin-right: 5%;
     padding: 15px
 }
-a{
+nav a{
     text-decoration: none;
     color: white;
 }
+
+/* Setor da Foto e Sobre */
 #mid-lane-container{
-    margin-top: 50px;
-    background-color: yellow;
-    height: 70vh;
+    display: flex;
+    padding: 40px;
+    width: 100;
+    justify-content: center;
+    background-color:#122D4A;
 }
 #image{
-    display: inline-block;
-    background-color: red;
+    background-image: url("./assets/icons/perfil-sem-foto.png");
     height: 300px;
     width: 250px;
+    margin-right: 10%;
+    background-size: 250px 300px; 
 }
 #sobre{
-    background-color: yellow;
-    display: inline-block;
-    width: 250px;
+    color:white;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: left;
+    width: 400px;
 }
+
+/* Setor dos Projetos */
 #projetos{
+font-family: 'Fira Sans', sans-serif;
 text-align: center;
-color: white;
-background-color: blue;
+background-color:#0E243B;
+padding: 20px;
+width: 100;
+
 }
 .project-square{
     display: inline-block;
-    background-color: white;
-    margin-left: 100px;
-    margin-right: 100px;
+    background-color: gray;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 5%;
     height: 200px;
     width: 200px;
+    border-radius: 10px;
 }
+
+/* Footer */
 footer{
+    padding: 20px;
+    background-color: #122D4A;
     color: white;
+    text-align: left;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    color: #A4BABF;
+    margin-bottom: 20px;
+}
+footer a {
+    color: white;
+}
+footer h1{
+    padding:20px;
+}
+#background{
+    background-color: #122D4A;
     text-align: center;
-    background-color:black;
+    color: white;
 }
-img{
-    width: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-#github{
-background-color: white;
-border-radius: 8px;
-}
+
