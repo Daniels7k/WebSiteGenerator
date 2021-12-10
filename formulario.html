@@ -11,6 +11,14 @@
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 color: white;
                 font-size: 18px;
+                font-weight: bold;
+            }
+            h1{
+                padding: 10px;
+                text-align: center;
+            }
+            .formContainer{
+                max-width: 300px;
                 background-color: rgba(150, 241, 178, 0.89);
                 padding: 20px;
                 margin: 20px;
@@ -22,13 +30,11 @@
                 margin: 5px;
             }
             input{
-
                 box-sizing: border-box;
                 padding: 12px;
                 border: none;
                 margin-bottom: 10px;
             }
-
         </style>    
         <script src="./script.js"></script>
     </head>
@@ -40,11 +46,26 @@
                 <p>Nome completo:</p>
             <input id="nome" type="text" name="Nome" placeholder="Nome Completo"> 
                 <p>Contato:</p>
-
+            <input id="Contato" type="text" name="Contact" placeholder="(00) 0000-0000">
+                <p>Email:</p>
+            <input id="Email" type="text" name="Email" placeholder="Email">
+                <p>Linkedin:</p>
+            <input id="Linkedin" type="text" name="Linkedin" placeholder="Linkedin">
+                <p>Imagem:</p>
+            <input id="Imagem" type="file" name="Image" placeholder=Imagem>
+                <p>Sobre:</p>
+            <input id="Sobre" type="text" name=About placeholder=Sobre> 
+                <p>Projetos:</p>
+            <input id="Projetos" type="text" name="Projects" placeholder="Projetos">
+            <br>
+            <button type="button" onclick="enviar()">Enviar</button>
+            
         </form>
         </div>
         
         
     </body>
     </html>
+    
+    
 </html>
