@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebSiteGenerator</title>
-    <style type="text/css">
-        body{
-            background-color: black;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: white;
-            font-size: 18px;
-        }
-        h1{
-            padding: 10px;
-            text-align: center;
 
-        }
-        .formContainer{
-            max-width: 500px;
-            background-color: rgba(150, 241, 178, 0.89);
-            padding: 20px;
-            margin: 20px;
-            float: left;
-            color:black;
-            text-align: center;
-        }
-        p{
-            margin: 5px;
-        }
-        input{
+        <style type="text/css">
+            body{
+                background-color: black;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            h1{
+                padding: 10px;
+                text-align: center;
+            }
+            .formContainer{
+                max-width: 300px;
+                background-color: rgba(150, 241, 178, 0.89);
+                padding: 20px;
+                margin: 20px;
+                float: left;
+                color:black;
+                text-align: center;
+            }
+            p{
+                margin: 5px;
+            }
+            input{
+                box-sizing: border-box;
+                padding: 12px;
+                border: none;
+                margin-bottom: 10px;
+            }
+            input[type="file"] {
+
+            }
             
+        </style>    
+        <script src="./script.js"></script>
+    </head>
+
+    <body>
+        <h1>Preencha seus dados</h1>
+        <div class="formContainer">
+        <form>
+                <p>Nome completo:</p>
+            <input id="nome" type="text" name="Nome" placeholder="Nome Completo"> 
+                <p>Contato:</p>
+            <input id="Contato" type="text" name="Contact" placeholder="(00) 0000-0000">
+                <p>Email:</p>
+            <input id="Email" type="text" name="Email" placeholder="Email">
+                <p>Linkedin:</p>
+            <input id="Linkedin" type="text" name="Linkedin" placeholder="Linkedin">
+                <p>Imagem:</p>
+            <input id="Imagem" type="file" name="Image" placeholder=Imagem>
+                <p>Sobre:</p>
+            <input id="Sobre" type="text" name=About placeholder=Sobre> 
+                <p>Projetos:</p>
+            <input id="Projetos" type="text" name="Projects" placeholder="Projetos">
+            <br>
+            <button type="button" onclick="enviar()">Enviar</button>
             
-            box-sizing: border-box;
-            padding: 12px;
-            border: none;
-            margin-bottom: 10px;
-        }
-
-
-
-    </style>
+        </form>
+        </div>
+        
+        
+    </body>
+    </html>
     
-
-
-</head>
-<body>
-    <h1>Preencha seus dados</h1>
-    <div class="formContainer">
-    <form>
-            <p>Nome completo:</p>
-        <input type="text" name="Nome" placeholder="Nome Completo"> 
-            <p>Contato:</p>
-        <input type="text" name="Contact" placeholder="(00) 0000-0000">
-            <p>Email:</p>
-        <input type="text" name="Email" placeholder="Email">
-            <p>Linkedin:</p>
-        <input type="text" name="Linkedin" placeholder="Linkedin">
-            <p>Imagem:</p>
-        <input type="button" name="Image" placeholder=Imagem>
-            <p>Sobre:</p>
-        <input type="text" name=About placeholder=Sobre> 
-            <p>Projetos:</p>
-        <input type="text" name="Projects" placeholder="Projetos">
-    </form>
-    </div>
     
-</body>
 </html>
