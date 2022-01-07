@@ -15,3 +15,5 @@ Fazer com que os links da barra footer sejam clicaveis.
 Estilizar a barra footer.
 
 Adicionar uma guia de Projetos no formulario.
+
+Tornar o site responsivo.
