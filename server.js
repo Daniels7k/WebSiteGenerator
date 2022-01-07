@@ -15,9 +15,25 @@ app.use(express.urlencoded({
 app.engine("handlebars", handlebars.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Rotas
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public", "index.html"))
+app.use(express.static(__dirname + '/public'));
+
+app.post("/your-site", (req, res) => {
+    let data = {
+        nome: req.body.nome,
+        profissao: req.body.profissao,
+        sobre: req.body.about,
+        image: req.body.image,
+        telefone: req.body.telefone,
+        email: req.body.email,
+        github: req.body.github,
+        linkedin: req.body.linkedin,
+    }
+
+    console.log(data)
+
+    res.render("template_blue", {data})
 })
 
 app.listen(PORT, () => {
