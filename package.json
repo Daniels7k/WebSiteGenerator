@@ -1,0 +1,23 @@
+{
+  "name": "web-site-generator",
+  "version": "1.0.0",
+  "description": "A ideia desse projeto é criar um Gerador de website pessoal, a pessoa preenche um formulário com seus dados e o back-end processa, e retorna uma pagína de apresentação completa pro usuário.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniels7k/WebSiteGenerator.git"
+  },
+  "author": "Daniels7k",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daniels7k/WebSiteGenerator/issues"
+  },
+  "homepage": "https://github.com/Daniels7k/WebSiteGenerator#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "handlebars": "^4.7.7"
+  }
+}
