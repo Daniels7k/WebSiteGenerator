@@ -4,68 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSiteGenerator</title>
-        <style type="text/css">
-            body{
-                background-color: black;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                color: white;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            h1{
-                padding: 10px;
-                text-align: center;
-            }
-            .formContainer{
-                max-width: 300px;
-                background-color: rgba(150, 241, 178, 0.89);
-                padding: 20px;
-                margin: 20px;
-                float: left;
-                color:black;
-                text-align: center;
-            }
-            p{
-                margin: 5px;
-            }
-            input{
-                box-sizing: border-box;
-                padding: 12px;
-                border: none;
-                margin-bottom: 10px;
-            }
-        </style>    
-        <script src="./script.js"></script>
-    </head>
+    <link rel="stylesheet" href="./styles/formulario.css">
+    <title>Formulario</title>
 
-    <body>
-        <h1>Preencha seus dados</h1>
-        <div class="formContainer">
-        <form>
-                <p>Nome completo:</p>
-            <input id="nome" type="text" name="Nome" placeholder="Nome Completo"> 
-                <p>Contato:</p>
-            <input id="Contato" type="text" name="Contact" placeholder="(00) 0000-0000">
-                <p>Email:</p>
-            <input id="Email" type="text" name="Email" placeholder="Email">
-                <p>Linkedin:</p>
-            <input id="Linkedin" type="text" name="Linkedin" placeholder="Linkedin">
-                <p>Imagem:</p>
-            <input id="Imagem" type="file" name="Image" placeholder=Imagem>
-                <p>Sobre:</p>
-            <input id="Sobre" type="text" name=About placeholder=Sobre> 
-                <p>Projetos:</p>
-            <input id="Projetos" type="text" name="Projects" placeholder="Projetos">
-            <br>
-            <button type="button" onclick="enviar()">Enviar</button>
-            
+</head>
+<body>
+    <div class="box">
+        <form action="/your-site" method="post" id="form">
+            <fieldset>
+             <legend><b>Fórmulario WebSiteGenerator</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome e Sobrenome</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="profissao" id="profissao" class="inputUser" required>
+                    <label class="labelInput" for="profissao" >Profissão</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                    <label class="labelInput" for="telefone">Telefone</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label class="labelInput" for="email">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="github" id="github" class="inputUser" required>
+                    <label class="labelInput" for="github">Github</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="linkedin" id="linkedin" class="inputUser" required>
+                    <label class="labelInput" for="linkedin">Linkedin</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <br>
+                    <label id="imagemLabel" for="imagem">Envie sua Foto Pessoal</label>
+                    <input type="file" id="imagem" name="imagem" required>
+                </div>
+                <br>
+                <br>
+                <div class="inputBox">
+                    <label class="labelInputSobre" for="sobre">Sobre</label>
+                    <br><br>
+                    <textarea rows="15" id="sobre" name="sobre" cols="45" form="form" required></textarea>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
         </form>
-        </div>
-        
-        
-    </body>
-    </html>
-    
-    
+    </div>
+</body>
 </html>
