@@ -14,4 +14,3 @@ A ideia desse projeto é criar um Gerador de website pessoal, a pessoa preenche 
 -   [ ] Express
 -   [ ] BodyParser
 
-[Clique aqui](https://daniels7k.github.io/WebSiteGenerator/) para visualizar o projeto.
