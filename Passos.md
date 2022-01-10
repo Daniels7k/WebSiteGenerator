@@ -1,4 +1,4 @@
-Adicionar uma linha entre o nome e a profissão.
+Adicionar uma linha entre o nome e a profissão. - Concluida as 7:48 do dia 10/01
 
 Ajustar a barra de navegação.
 
