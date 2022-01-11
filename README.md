@@ -3,7 +3,7 @@ A ideia desse projeto é criar um Gerador de website pessoal, a pessoa preenche 
 
 ## :hammer_and_wrench: Features
 
--   [ ] Seleção de até 3 estilos pre-definidos para seu site.
+
 
 ## ✨ Tecnologias
 
@@ -13,4 +13,6 @@ A ideia desse projeto é criar um Gerador de website pessoal, a pessoa preenche 
 -   [ ] Node.js
 -   [ ] Express
 -   [ ] BodyParser
+-   [ ] Handle
+-   Bars 
 
