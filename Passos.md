@@ -10,10 +10,14 @@ Ajustar o card "Sobre mim". - Concluída
 
 Programar o card de Projetos, para so aparecerem os quadrados com projetos.
 
-Fazer com que os links da barra footer sejam clicaveis.
+Fazer com que os links da barra footer sejam clicaveis. Concluido as 7:34 do dia 11/01
 
 Estilizar a barra footer.
 
 Adicionar uma guia de Projetos no formulario.
 
 Tornar o site responsivo.
+
+Programar a captura da foto e colocação no site.
+
+Arrumar o bug da aba sobre.
