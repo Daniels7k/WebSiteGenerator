@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+h1{
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    text-align: center;
+    padding-top: 20px;
+}
+hr{
+    width: 90vw;
+}
+#headerContainer{
+position: relative;
+background-image:url(../assets/backgrounds/worspace.jpg) ;
+background-position: 60% 46%;
+background-size: cover;
+height: 50vh;
+}
+#info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#headerContainer img{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+#nome{
+    font-family: 'Lato', sans-serif;
+    font-size: 80px;
+    color: white;
+}
+#profissao{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 50px;
+}
+#regiao{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+}
+#sobre{
+    background-color: whitesmoke;
+    text-align: center;
+    height: 10vh;
+}
+#infoSobre{
+    font-size:30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+#squares{
+    display: flex;
+    padding-top: 40px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 35vh;
+    justify-content: center;
+    text-align: center;
+}
+.square{
+    display:inline-block;
+    color: white;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 300px;
+    width: 300px;
+}
+#cv p{
+    margin-top: 10px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    margin-left: 25px;
+    width: 250px;
+}
+#cv img{
+    height: 120px;
+    width: 120px;
+}
+button{
+    color: white;
+    border-style: none;
+    background-color: black;
+    height: 50px;
+    width: 100px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+#linkedin p{
+    margin-top: 10px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    margin-left: 50px;
+    width: 200px;
+}
+#linkedin img {
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+#gmail img{
+    width: 120px;
+    height: 120x;
+}
+
+#gmail p{
+    margin-top: 10px;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    margin-left: 50px;
+    width: 200px;
+    
+}
