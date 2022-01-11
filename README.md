@@ -13,6 +13,5 @@ A ideia desse projeto é criar um Gerador de website pessoal, a pessoa preenche 
 -   [ ] Node.js
 -   [ ] Express
 -   [ ] BodyParser
--   [ ] Handle
--   Bars 
+-   [ ] HandleBars 
 
