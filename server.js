@@ -1,9 +1,8 @@
 const PORT = 3000;
 const express = require ("express");
-const path = require("path/posix");
 const handlebars = require("express-handlebars")
 
-const app = express ()
+const upload = multer({storage})
 
 // Body Parser
 app.use(express.json());
@@ -20,20 +19,18 @@ app.set("view engine", "handlebars");
 app.use(express.static(__dirname + '/public'));
 
 app.post("/your-site", (req, res) => {
+    
     let data = {
         nome: req.body.nome,
         profissao: req.body.profissao,
-        sobre: req.body.about,
-        image: req.body.image,
-        telefone: req.body.telefone,
+        sobre: req.body.sobre,
         email: req.body.email,
-        github: req.body.github,
         linkedin: req.body.linkedin,
     }
 
     console.log(data)
 
-    res.render("template_blue", {data})
+    res.render("template_site", {data})
 })
 
 app.listen(PORT, () => {
