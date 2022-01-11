@@ -2,11 +2,11 @@ Adicionar uma linha entre o nome e a profissão. - Concluida as 7:48 do dia 10/0
 
 Ajustar a barra de navegação. - Concluida as 8:16 do dia 10/01
 
-Adicionar os links aos botões da barra de navegação.
+Adicionar os links aos botões da barra de navegação. - Concluida
 
-Adicionar animações de Hover nos botões de navegação.
+Adicionar animações de Hover nos botões de navegação. - Concluida
 
-Ajustar o card "Sobre mim".
+Ajustar o card "Sobre mim". - Concluída
 
 Programar o card de Projetos, para so aparecerem os quadrados com projetos.
 
