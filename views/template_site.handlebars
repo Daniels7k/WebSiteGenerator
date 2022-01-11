@@ -1,0 +1,43 @@
+
+<head>
+    <link rel="stylesheet" href="/styles/template_site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>{{{data.nome}}}</title>
+</head>
+
+<div id="headerContainer">
+        <div id="info">
+            <img src="https://github.com/Daniels7k.png" alt="">
+            <p id="nome">{{{data.nome}}}</p>
+            <p id="profissao">{{{data.profissao}}}</p>
+            <p id="regiao">{{{data.regiao}}}</p>
+        </div>
+    </div>
+    <div id="sobre">
+        <br><br>
+        <p id="infoSobre">{{{data.sobre}}}</p>
+        <hr>
+    </div>
+
+    <div id="squares">
+        <div id="linkedin" class="square">
+            <img src="/assets/icons/linkedin-logo.png" alt="">
+            <p>Acesse também meu Linkedin</p>
+            <br>
+            <button onclick="location.href='{{{data.linkedin}}}'">Clique Aqui</button>
+        </div>
+        <div id="cv" class="square">
+            <img src="/assets/icons/cv.png" alt="">
+            <p>Dê uma olhada no meu curriculo</p>
+            <br>
+            <button>Clique Aqui</button>
+        </div>
+        <div id="gmail" class="square">
+           <img src="/assets/icons/gmail-logo.png" alt="">
+           <p>Entre em contato comigo</p>
+           <br>
+           <button>Clique Aqui</button>
+        </div>
+    </div>
