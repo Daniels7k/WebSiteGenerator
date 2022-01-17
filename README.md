@@ -1,8 +1,12 @@
+![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/LOGO.png)
 
-## WebSiteGenerator
+
+
+## 💻 Projeto
+
 Bem vindo ao WebSiteGenerator, o objetivo desse projeto é facilitar a criação de Web-Sites pessoais para pessoas que não possuem conhecimento em desenvolvimento web. 
 
-## :hammer_and_wrench: Futuras Features
+Utilizando as informações que o usuário passa através de um formulário, o servidor Express processa as informações usando o NPM Body-Parser e então as direciona para a template engine Handlebars, que por sua vez monta um site já predefinido com as informações do usuário.
 
 Futuramente o projeto podera contar com a criação de contas, para que se possa armazenar as informações do usuário, e manter seu site no ar para ser acessado por qualquer pessoa interessada.
 Também poderemos contar com a personalização do site, ao gosto do cliente, coisas como:
