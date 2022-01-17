@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="./styles/formulario.css">
+    <title>Formulario</title>
+</head>
+
+<div class="box">
+    <form action="/your-site" method="post" id="form">
+        <fieldset>
+            <legend><b>Fórmulario WebSiteGenerator</b></legend>
+            <br>
+            <!-- Nome e Sobrenome -->
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" class="inputUser" >
+                <label for="nome" class="labelInput">Nome e Sobrenome</label>
+            </div>
+            <br><br>
+            <!-- Profissão -->
+            <div class="inputBox">
+                <input type="text" name="profissao" id="profissao" class="inputUser" >
+                <label class="labelInput" for="profissao">Profissão</label>
+            </div>
+            <br><br>
+            <!-- Email -->
+            <div class="inputBox">
+                <input type="text" name="email" id="email" class="inputUser" >
+                <label class="labelInput" for="email">Email</label>
+            </div>
+            <br><br>
+            <!-- Linkedin -->
+            <div class="inputBox">
+                <input type="text" name="linkedin" id="linkedin" class="inputUser" >
+                <label class="labelInput" for="linkedin">Linkedin</label>
+            </div>
+            <br><br>
+            <!-- Github -->
+            <div class="inputBox">
+                <input type="text" name="github" id="github" class="inputUser" >
+                <label class="labelInput" for="github">Github</label>
+            </div>
+            <br>
+            <p>*Sua foto sera a mesma do seu perfil no Github</p>
+            <br>
+            <!-- Descrição da Profissão -->
+            <div class="inputBox">
+                <label class="labelInputSobre" for="sobre">Defina em no maximo 2 linhas sua profissão:</label>
+                <br><br>
+                <textarea maxlength="94" rows="2" id="sobre" name="sobre" cols="45" form="form" ></textarea>
+            </div>
+            <br><br>
+            <!-- Submit -->
+            <button type="submit" id="submit">Enviar</button>
+        </fieldset>
+    </form>
+</div>
