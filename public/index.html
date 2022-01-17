@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,58 +9,57 @@
     <title>Formulario</title>
 
 </head>
+
 <body>
     <div class="box">
-        <form action="/your-site" method="post" id="form">
+        <form action="/your-site" method="post" id="form" >
             <fieldset>
-             <legend><b>Fórmulario WebSiteGenerator</b></legend>
+                <legend><b>Fórmulario WebSiteGenerator</b></legend>
                 <br>
+                <!-- Nome e Sobrenome -->
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome e Sobrenome</label>
                 </div>
                 <br><br>
+                <!-- Profissão -->
                 <div class="inputBox">
                     <input type="text" name="profissao" id="profissao" class="inputUser" required>
-                    <label class="labelInput" for="profissao" >Profissão</label>
+                    <label class="labelInput" for="profissao">Profissão</label>
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="telefone" id="telefone" class="inputUser" required>
-                    <label class="labelInput" for="telefone">Telefone</label>
-                </div>
-                <br><br>
+                <!-- Email -->
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" required>
                     <label class="labelInput" for="email">Email</label>
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="github" id="github" class="inputUser" required>
-                    <label class="labelInput" for="github">Github</label>
-                </div>
-                <br><br>
+                <!-- Linkedin -->
                 <div class="inputBox">
                     <input type="text" name="linkedin" id="linkedin" class="inputUser" required>
                     <label class="labelInput" for="linkedin">Linkedin</label>
                 </div>
-                <br>
+                <br><br>
+                <!-- Github -->
                 <div class="inputBox">
-                    <br>
-                    <label id="imagemLabel" for="imagem">Envie sua Foto Pessoal</label>
-                    <input type="file" id="imagem" name="imagem" required>
+                    <input type="text" name="github" id="github" class="inputUser" required>
+                    <label class="labelInput" for="github">Github</label>
                 </div>
                 <br>
+                <p>*Sua foto sera a mesma do seu perfil no Github</p>
                 <br>
+                <!-- Descrição da Profissão -->
                 <div class="inputBox">
-                    <label class="labelInputSobre" for="sobre">Sobre</label>
+                    <label class="labelInputSobre" for="sobre">Defina em no maximo 2 linhas sua profissão:</label>
                     <br><br>
-                    <textarea rows="15" id="sobre" name="sobre" cols="45" form="form" required></textarea>
+                    <textarea maxlength="94" rows="2" id="sobre" name="sobre" cols="45" form="form" required></textarea>
                 </div>
                 <br><br>
+                <!-- Submit -->
                 <button type="submit" id="submit">Enviar</button>
             </fieldset>
         </form>
     </div>
 </body>
+
 </html>
