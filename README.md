@@ -31,8 +31,22 @@ Também poderemos contar com a personalização do site, ao gosto do cliente, co
 -   [ ] BodyParser
 -   [ ] HandleBars 
 
+## Iniciando o Projeto
+Utilize o yarn ou o npm install para instalar as dependências do projeto.
+```cl
+npm install
+```
+Em seguida inicie o servidor express com node server.js
+```cl
+node server.js
+```
+E então acesse o site http//localhost:3000/
+
 ## Imagens
 
 ![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/site.png)
 
 ![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/formulario.png)
+
+
+### Este projeto ainda esta em desenvolvimento.
