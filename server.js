@@ -1,8 +1,7 @@
 const PORT = 3000;
 const express = require ("express");
 const handlebars = require("express-handlebars")
-
-const upload = multer({storage})
+const app = express()
 
 // Body Parser
 app.use(express.json());
@@ -26,6 +25,7 @@ app.post("/your-site", (req, res) => {
         sobre: req.body.sobre,
         email: req.body.email,
         linkedin: req.body.linkedin,
+        github: req.body.github,
     }
 
     console.log(data)
