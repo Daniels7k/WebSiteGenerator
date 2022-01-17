@@ -17,6 +17,10 @@ app.set("view engine", "handlebars");
 
 app.use(express.static(__dirname + '/public'));
 
+app.get("/formulario", (req, res) => {
+    res.render("formulario")
+})
+
 app.post("/your-site", (req, res) => {
     
     let data = {
