@@ -49,4 +49,4 @@ E então acesse o site http//localhost:3000/
 ![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/formulario.png)
 
 
-### Este projeto ainda esta em desenvolvimento.
+### Este projeto ainda está em desenvolvimento.
