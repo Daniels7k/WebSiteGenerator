@@ -1,7 +1,3 @@
-## Imagens
-
-![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/site.png)
-
 
 ## WebSiteGenerator
 Bem vindo ao WebSiteGenerator, o objetivo desse projeto é facilitar a criação de Web-Sites pessoais para pessoas que não possuem conhecimento em desenvolvimento web. 
@@ -31,3 +27,8 @@ Também poderemos contar com a personalização do site, ao gosto do cliente, co
 -   [ ] BodyParser
 -   [ ] HandleBars 
 
+## Imagens
+
+![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/site.png)
+
+![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/formulario.png)
