@@ -2,7 +2,7 @@ const PORT = 3000;
 const express = require ("express");
 const { engine } = require("express-handlebars")
 const mongooose = require("mongoose")
-const siteRoute = require("./routes/siteRoute")
+const mainRoute = require("./routes/mainRoute")
 const app = express()
 
 
@@ -35,7 +35,7 @@ mongooose.connect("mongodb+srv://curso:curso@cluster0.mv0re.mongodb.net/WebSiteG
 
 app.use(express.static(__dirname + '/public'));
 
-app.use("/", siteRoute)
+app.use("/", mainRoute)
 
 app.listen(PORT, () => {
     console.log("Server Running on Port:", PORT)
