@@ -2,9 +2,25 @@ const PORT = 3000;
 const express = require ("express");
 const { engine } = require("express-handlebars");
 const mongooose = require("mongoose")
+const session = require("express-session")
+const flash = require("connect-flash")
 const userRouter = require("./routes/userRoute")
 const app = express()
 
+//Session
+app.use(session({
+    secret:"WebSiteGenerator12121212",
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(flash())
+
+//Variaveis Globais
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash("success_msg")
+    res.locals.error_msg = req.flash("error_msg")
+    next()
+})
 
 // Body Parser
 app.use(express.json());
