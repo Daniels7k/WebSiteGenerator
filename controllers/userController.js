@@ -10,7 +10,7 @@ function registroGet (req, res) {
 }
 
 function registroPost (req, res) {
-
+    
     //Salvando no banco de dados
     const novoUsuario = new Usuario({
         nome: req.body.nome,
