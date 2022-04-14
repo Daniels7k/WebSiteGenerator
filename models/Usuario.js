@@ -9,7 +9,8 @@ const Usuario = new Schema({
     linkedin: { type: String, required: true},
     github: { type: String, required: true},
     sobre: { type: String, required: true},
-    senha: { type: String, minlength:8, maxlength: 200}
+    senha: { type: String, minlength:8, maxlength: 200},
+    CreatedAt: {type: Date, default: Date.now},
 })
 
 mongooose.model("usuario", Usuario)
