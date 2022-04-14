@@ -5,30 +5,40 @@ const Usuario = mongoose.model("usuario")
 
 //Funções
 //Registro
-function registroGet (req, res) {
+function registroGet(req, res) {
     res.render("usuario/registro")
 }
 
-function registroPost (req, res) {
-    
-    //Salvando no banco de dados
-    const novoUsuario = new Usuario({
-        nome: req.body.nome,
-        sobrenome: req.body.sobrenome,
-        email: req.body.email,
-        profissao: req.body.profissao,
-        linkedin: req.body.linkedin,
-        github: req.body.linkedin,
-        sobre: req.body.sobre,
-        senha: req.body.senha
-    }).save().then(() => {
-        res.redirect("/")
+function registroPost(req, res) {
+    //Verificando preexistência de email
+    Usuario.findOne({ email: req.body.email }).then((verifiedEmail) => {
+        if (verifiedEmail) {
+            req.flash("error_msg", "Este email já existe, tente outro!")
+            res.redirect("/usuarios/registro")
 
-    }).catch((error) => {
-        console.log(error)
+        } else {
+            //Salvando no banco de dados
+            const novoUsuario = new Usuario({
+                nome: req.body.nome,
+                sobrenome: req.body.sobrenome,
+                email: req.body.email,
+                profissao: req.body.profissao,
+                linkedin: req.body.linkedin,
+                github: req.body.linkedin,
+                sobre: req.body.sobre,
+                senha: req.body.senha
+
+            }).save().then(() => {
+                req.flash("success_msg", "Cadastro feito com sucesso!")
+                res.redirect("/")
+
+            }).catch((error) => {
+                req.flash("Error_msg", "Houve um erro ao cadastrar, tente novamente!")
+                res.redirect("/")
+            })
+        }
     })
-
 }
 
 
-module.exports = {registroGet, registroPost} 
+module.exports = { registroGet, registroPost } 
