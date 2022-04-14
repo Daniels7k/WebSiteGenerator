@@ -1,7 +1,12 @@
+//Modulos
+const mongoose = require("mongoose")
+require("../models/Usuario")
+const Usuario = mongoose.model("usuario")
 
+//Funções
 
-function registro (req, res) {
-    res.send("pagina de registro")
+function registroGet (req, res) {
+    res.render("usuario/registro")
 }
 
-module.exports = {registro} 
+module.exports = {registroGet} 
