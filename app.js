@@ -1,6 +1,6 @@
 const PORT = 3000;
 const express = require ("express");
-const { engine } = require("express-handlebars")
+const { engine } = require("express-handlebars");
 const mongooose = require("mongoose")
 const userRouter = require("./routes/userRoute")
 const app = express()
@@ -32,6 +32,10 @@ mongooose.connect("mongodb+srv://curso:curso@cluster0.mv0re.mongodb.net/WebSiteG
 })
 
 // Rotas
+
+app.get("/", (req, res) => {
+    res.redirect("/bem-vindo")
+})
 
 app.get("/bem-vindo", (req, res) => {
     res.render("index")
