@@ -10,7 +10,16 @@ router.post("/registroPost", UserController.registroPost )
 //Login
 router.get("/login", UserController.loginGet)
 router.post("/loginPost", UserController.loginPost)
+
 //MeuSite
 router.get("/meusite/:slug", personalSiteController.getData )
+
+//Testes
+router.get("/cookie", (req, res) => {
+        token = {
+            cookie: req.cookies.authorizationToken
+        } 
+        res.send(token)
+})
 
 module.exports = router

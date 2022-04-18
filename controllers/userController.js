@@ -55,14 +55,17 @@ function loginPost (req, res) {
             req.flash("error_msg", "Este email não esta cadastrado, tente se cadastrar!")
             res.redirect("/usuarios/login")
         }else{
+            //Criando token de autorização
             const token = jwt.sign({id:usuario.id}, "segredo")
             res.cookie("authorizationToken", token)
             req.flash("success_msg", "Logado com sucesso")
             res.redirect(`/usuarios/meusite/${usuario.usuario}`)
         }
     }).catch((error) => {
+        console.log(error)
+        //Tratando o erros
         req.flash("error_msg", "Houve um erro interno!")
-        res.redirect("/usuario/login")
+        res.redirect("/usuarios/login")
     })
 }
 
