@@ -7,6 +7,9 @@ const personalSiteController = require("../controllers/personalSiteController")
 router.get("/registro", UserController.registroGet)
 router.post("/registroPost", UserController.registroPost )
 
+//Login
+router.get("/login", UserController.loginGet)
+
 //MeuSite
 router.get("/meusite/:slug", personalSiteController.getData )
 

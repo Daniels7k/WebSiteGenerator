@@ -42,4 +42,9 @@ function registroPost(req, res) {
 }
 
 
-module.exports = { registroGet, registroPost } 
+//Registro
+function loginGet (req, res) {
+    res.render("usuario/login")
+}
+
+module.exports = { registroGet, registroPost, loginGet } 
