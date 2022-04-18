@@ -1,5 +1,6 @@
 //Modulos
 const mongoose = require("mongoose")
+const jwt = require("jsonwebtoken")
 require("../models/Usuario")
 const Usuario = mongoose.model("usuario")
 
@@ -42,9 +43,27 @@ function registroPost(req, res) {
 }
 
 
-//Registro
+//Login
 function loginGet (req, res) {
     res.render("usuario/login")
 }
 
-module.exports = { registroGet, registroPost, loginGet } 
+function loginPost (req, res) {
+    //Verificando preexistencia de email
+    Usuario.findOne({email: req.body.email}).then((usuario) => {
+        if(!usuario){
+            req.flash("error_msg", "Este email não esta cadastrado, tente se cadastrar!")
+            res.redirect("/usuarios/registro")
+        }else{
+            const token = jwt.sign({id:usuario.id}, "segredo")
+            res.cookie("authorizationToken", token)
+            req.flash("sucess_msg", "Logado com sucesso")
+            res.redirect(`/usuarios/meusite/${usuario.usuario}`)
+        }
+    }).catch((error) => {
+        req.flash("error_msg", "Houve um erro interno!")
+        res.redirect("/usuario/login")
+    })
+}
+
+module.exports = { registroGet, registroPost, loginGet }

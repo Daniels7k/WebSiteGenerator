@@ -5,6 +5,7 @@ const mongooose = require("mongoose")
 const session = require("express-session")
 const flash = require("connect-flash")
 const userRouter = require("./routes/userRoute")
+const cookieParser = require("cookie-parser")
 const app = express()
 
 //Session
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+app.use(cookieParser())
 
 // Handlebars
 app.engine('handlebars', engine({
