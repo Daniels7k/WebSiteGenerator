@@ -5,7 +5,7 @@ const Usuario = mongoose.model("usuario")
 
 
 function getData (req, res) {
-    Usuario.findOne({email: "cleitondaniel.19@gmail.com"}).then((data) => {
+    Usuario.findOne({usuario: req.params.slug}).then((data) => {
         res.render("usuario/meuSite", {data})
     })
 }

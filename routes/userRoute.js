@@ -8,6 +8,6 @@ router.get("/registro", UserController.registroGet)
 router.post("/registroPost", UserController.registroPost )
 
 //MeuSite
-router.get("/meusite", personalSiteController.getData )
+router.get("/meusite/:slug", personalSiteController.getData )
 
 module.exports = router
