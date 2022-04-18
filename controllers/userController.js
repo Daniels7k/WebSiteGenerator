@@ -53,11 +53,11 @@ function loginPost (req, res) {
     Usuario.findOne({email: req.body.email}).then((usuario) => {
         if(!usuario){
             req.flash("error_msg", "Este email não esta cadastrado, tente se cadastrar!")
-            res.redirect("/usuarios/registro")
+            res.redirect("/usuarios/login")
         }else{
             const token = jwt.sign({id:usuario.id}, "segredo")
             res.cookie("authorizationToken", token)
-            req.flash("sucess_msg", "Logado com sucesso")
+            req.flash("success_msg", "Logado com sucesso")
             res.redirect(`/usuarios/meusite/${usuario.usuario}`)
         }
     }).catch((error) => {
