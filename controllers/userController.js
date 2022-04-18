@@ -20,6 +20,7 @@ function registroPost(req, res) {
             //Salvando no banco de dados
             const novoUsuario = new Usuario({
                 nome: req.body.nome,
+                usuario: req.body.usuario,
                 email: req.body.email,
                 profissao: req.body.profissao,
                 linkedin: req.body.linkedin,
