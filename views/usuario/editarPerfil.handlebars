@@ -1,0 +1,56 @@
+<div class="container mt-4">
+
+    <div class="card">
+
+        <div class="card-body">
+            <h3>Editando seus Dados</h3>
+            <form method="post" action="/usuarios/meusite/editPost">
+            <input type="hidden" name="usuarioHidden" value="{{usuario.usuario}}">
+                {{!-- Nome --}}
+                <div class="form-group mt-3">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome" value="{{usuario.nome}}">
+                </div>
+                {{!-- Usuario --}}
+                <div class="form-group mt-3">
+                    <label for="nome">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Sera usado como parte do site!" value="{{usuario.usuario}}">
+                </div>
+                {{!-- Email --}}
+                <div class="form-group mt-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu email" value="{{usuario.email}}">
+                </div>
+                {{!-- Profissao --}}
+                <div class="form-group mt-3">
+                    <label for="profissao">Sua profissão</label>
+                    <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Insira sua profissão" value="{{usuario.profissao}}">
+                </div>
+                {{!-- Linkedin --}}
+                <div class="form-group mt-3">
+                    <label for="linkedin">Seu Linkedin</label>
+                    <input type="text" class="form-control" id="linkedin" name="linkedin"
+                        placeholder="Insira seu linkedin" value="{{usuario.linkedin}}">
+                </div>
+                {{!-- Github --}}
+                <div class="form-group mt-3">
+                    <label for="github">Seu Github</label>
+                    <input type="text" class="form-control" id="github" name="github" placeholder="Insira seu Github" value="{{usuario.github}}">
+                </div>
+                {{!-- Sobre Mim --}}
+                <div class="form-group mt-3">
+                    <label for="sobre">Sobre você </label>
+                    <textarea class="form-control" id="sobreMim" name="sobreMim" rows="1"
+                        placeholder="Fale em 1 linha sobre você ou seu trabalho">{{usuario.sobreMim}}</textarea>
+                </div>
+                {{!-- Sobre o Trabalho --}}
+                <div class="form-group mt-3">
+                    <label for="sobre">Sobre seu trabalho </label>
+                    <textarea class="form-control" id="sobreTrabalho" name="sobreTrabalho" rows="1"
+                        placeholder="Fale em 1 linha sobre você ou seu trabalho">{{usuario.sobreTrabalho}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,12 @@ router.post("/loginPost", UserController.loginPost)
 //MeuSite
 router.get("/meusite/:slug", personalSiteController.getData )
 
+//Editando dados
+router.get("/meusite/:slug/edit", personalSiteController.editDataGet)
+router.post("/meusite/editPost", personalSiteController.editDataPost)
+
+//
+
 //Testes
 router.get("/cookie", (req, res) => {
         token = {
