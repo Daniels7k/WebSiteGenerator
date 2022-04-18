@@ -66,4 +66,4 @@ function loginPost (req, res) {
     })
 }
 
-module.exports = { registroGet, registroPost, loginGet }
+module.exports = { registroGet, registroPost, loginGet, loginPost }
