@@ -20,12 +20,12 @@ function registroPost(req, res) {
             //Salvando no banco de dados
             const novoUsuario = new Usuario({
                 nome: req.body.nome,
-                sobrenome: req.body.sobrenome,
                 email: req.body.email,
                 profissao: req.body.profissao,
                 linkedin: req.body.linkedin,
-                github: req.body.linkedin,
-                sobre: req.body.sobre,
+                github: req.body.github,
+                sobremim: req.body.sobreMim,
+                sobreTrabalho: req.body.sobreTrabalho,
                 senha: req.body.senha
 
             }).save().then(() => {
