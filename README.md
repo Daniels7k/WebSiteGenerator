@@ -1,4 +1,4 @@
-![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/LOGO.png)
+![](https://github.com/Daniels7k/Assets/blob/main/assets/WebSiteGenerator/WebsiteGenerator.png)
 
 
 
@@ -30,6 +30,10 @@ Também poderemos contar com a personalização do site, ao gosto do cliente, co
 -   [ ] Express
 -   [ ] BodyParser
 -   [ ] HandleBars 
+-   [ ] Mongodb
+-   [ ] Connect-Flash
+-   [ ] Cookie-Parser
+-   [ ] Nodemon
 
 ## Iniciando o Projeto
 Utilize o yarn ou o npm install para instalar as dependências do projeto.
@@ -44,9 +48,9 @@ E então acesse o site http//localhost:3000/
 
 ## Imagens
 
-![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/site.png)
+![](https://github.com/Daniels7k/Assets/blob/main/assets/WebSiteGenerator/perfil.png)
 
-![](https://github.com/Daniels7k/WebSiteGenerator/blob/main/public/preview/formulario.png)
+![](https://github.com/Daniels7k/Assets/blob/main/assets/WebSiteGenerator/Registro.png)
 
 
 ### Este projeto ainda está em desenvolvimento.
