@@ -12,7 +12,8 @@ router.get("/login", UserController.loginGet)
 router.post("/loginPost", UserController.loginPost)
 
 //MeuSite
-router.get("/meusite/:slug", personalSiteController.getData )
+router.get("/meusite/:slug", personalSiteController.getData)
+router.get("/todos", personalSiteController.allSites)
 
 //Editando dados
 router.get("/meusite/:slug/edit", personalSiteController.editDataGet)

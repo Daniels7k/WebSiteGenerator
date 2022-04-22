@@ -1,0 +1,68 @@
+<div class="container mt-4">
+    <h3>Todos os Sites</h3>
+    {{#each allUsers}}
+    <div class="container mt-3">
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="foto">
+                                    <img src="{{github}}.png" alt="">
+                </div>
+
+                <div class="a1">
+                    <div>
+                        <h4 class="nome">{{nome}}</h4>
+
+                        <h6 class="lead">{{profissao}}</h6>
+                    </div>
+                    <div class="q3">
+                        <p>{{sobreMim}}</p>
+                    </div>
+
+                </div>
+                <div class="q4 mt-2"><a href="/usuarios/meusite/{{usuario}}"><button class="btn btn-success">Ver Site</button></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+{{else}}
+{{/each}}
+
+
+<style>
+    .foto{
+        display: flex;
+        align-items: center;
+    }
+    .q4 {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100px;
+        height: 50px;
+    }
+
+    .card-body {
+        display: flex;
+    }
+
+    .profissao {
+        margin-left: 6px;
+    }
+
+    img {
+        margin-right: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    p {
+        margin: 0px
+    }
+
+    .q3 {
+        width: 80%;
+    }
+</style>

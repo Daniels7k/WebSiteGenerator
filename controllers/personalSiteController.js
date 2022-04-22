@@ -4,13 +4,23 @@ const jwt = require("jsonwebtoken")
 require("../models/Usuario")
 const Usuario = mongoose.model("usuario")
 
+//Listando todos os sites
+function allSites(req, res) {
+    //Buscando dados
+    Usuario.find({}).then((allUsers) => {
+        res.render("usuario/todosSites", {allUsers})
+    })
+}
 
+//Site do Usuario
 function getData(req, res) {
     Usuario.findOne({ usuario: req.params.slug }).then((data) => {
         res.render("usuario/meuSite", { data })
     })
 }
 
+//Editando dados do usuario
+//Get
 function editDataGet(req, res) {
     //Verificando autorização para editar dados
     const token = req.cookies.authorizationToken
@@ -33,7 +43,7 @@ function editDataGet(req, res) {
         })
     }
 }
-
+//Post
 function editDataPost(req, res) {
     //Verificando autorização para editar dados
     const token = req.cookies.authorizationToken
@@ -65,4 +75,4 @@ function editDataPost(req, res) {
 
 }
 
-module.exports = { getData, editDataGet, editDataPost }
+module.exports = { getData, editDataGet, editDataPost, allSites }
