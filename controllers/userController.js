@@ -26,17 +26,20 @@ function registroPost(req, res) {
                 profissao: req.body.profissao,
                 linkedin: req.body.linkedin,
                 github: req.body.github,
-                sobremim: req.body.sobreMim,
+                sobreMim: req.body.sobreMim,
                 sobreTrabalho: req.body.sobreTrabalho,
                 senha: req.body.senha
 
-            }).save().then(() => {
+            })
+            
+            novoUsuario.save().then(() => {
                 req.flash("success_msg", "Cadastro feito com sucesso!")
-                res.redirect("/")
+                res.redirect("/usuarios/login")
 
             }).catch((error) => {
-                req.flash("Error_msg", "Houve um erro ao cadastrar, tente novamente!")
-                res.redirect("/")
+                console.log(error)
+                req.flash("error_msg", "Houve um erro ao cadastrar, tente novamente!")
+                res.redirect("/usuarios/registro")
             })
         }
     })

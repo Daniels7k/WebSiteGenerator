@@ -22,9 +22,8 @@ router.post("/meusite/editPost", personalSiteController.editDataPost)
 
 //Testes
 router.get("/cookie", (req, res) => {
-        token = {
-            cookie: req.cookies.authorizationToken
-        } 
+        const token = req.cookies.authorizationToken
+        
         res.send(token)
 })
 
