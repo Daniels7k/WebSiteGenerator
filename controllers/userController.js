@@ -1,8 +1,7 @@
 //Modulos
 const mongoose = require("mongoose")
 const jwt = require("jsonwebtoken")
-const router = require("../routes/userRoute")
-const { cookie } = require("express/lib/response")
+const bcrypt = require("bcryptjs")
 require("../models/Usuario")
 const Usuario = mongoose.model("usuario")
 
@@ -30,7 +29,7 @@ function registroPost(req, res) {
                 github: req.body.github,
                 sobreMim: req.body.sobreMim,
                 sobreTrabalho: req.body.sobreTrabalho,
-                senha: req.body.senha
+                senha: bcrypt.hashSync(req.body.senha)
 
             })
 
@@ -60,11 +59,19 @@ function loginPost(req, res) {
             req.flash("error_msg", "Este email não esta cadastrado, tente se cadastrar!")
             res.redirect("/usuarios/login")
         } else {
-            //Criando token de autorização
-            const token = jwt.sign({ id: usuario.id, name: usuario.nome, usuario: usuario.usuario }, "segredo")
-            res.cookie("authorizationToken", token)
-            req.flash("success_msg", "Logado com sucesso")
-            res.redirect(`/usuarios/meusite/${usuario.usuario}`)
+            //Comparando senha com hash
+            const passwordAndUserMatch = bcrypt.compareSync(req.body.senha, usuario.senha)
+            if (!passwordAndUserMatch) {
+                req.flash("error_msg", "Email/Senha incorretos")
+                res.redirect("/usuarios/login")
+            } else {
+                //Criando token de autorização
+                const token = jwt.sign({ id: usuario.id, name: usuario.nome, usuario: usuario.usuario }, "segredo")
+                res.cookie("authorizationToken", token)
+                req.flash("success_msg", "Logado com sucesso")
+                res.redirect(`/usuarios/meusite/${usuario.usuario}`)
+            }
+
         }
     }).catch((error) => {
         console.log(error)
@@ -80,8 +87,8 @@ function logout(req, res) {
     for (var prop in cookie) {
         if (!cookie.hasOwnProperty(prop)) {
             continue;
-        }    
-        res.cookie(prop, '', {expires: new Date(0)});
+        }
+        res.cookie(prop, '', { expires: new Date(0) });
     }
     req.flash("success_msg", "Logout feito com sucesso!")
     res.redirect('/bem-vindo');
