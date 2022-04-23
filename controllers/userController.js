@@ -17,7 +17,12 @@ function registroPost(req, res) {
         if (verifiedEmail) {
             req.flash("error_msg", "Este email já existe, tente outro!")
             res.redirect("/usuarios/registro")
-
+        }
+        if (!verifiedEmail) {
+            Usuario.findOne({ usuario: req.body.usuario }).then((usuarioExistente) => {
+                req.flash("error_msg", "Este usuario já existe, tente outro!")
+                res.redirect("/usuarios/registro")
+            })
         } else {
             //Salvando no banco de dados
             const novoUsuario = new Usuario({
