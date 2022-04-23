@@ -40,13 +40,13 @@
                 {{!-- Sobre Mim --}}
                 <div class="form-group mt-3">
                     <label for="sobre">Sobre você </label>
-                    <textarea class="form-control" id="sobreMim" name="sobreMim" rows="1"
+                    <textarea class="form-control" id="sobreMim" name="sobreMim" rows="4" maxlength="661"
                         placeholder="Fale em 1 linha sobre você ou seu trabalho">{{usuario.sobreMim}}</textarea>
                 </div>
                 {{!-- Sobre o Trabalho --}}
                 <div class="form-group mt-3">
                     <label for="sobre">Sobre seu trabalho </label>
-                    <textarea class="form-control" id="sobreTrabalho" name="sobreTrabalho" rows="1"
+                    <textarea class="form-control" id="sobreTrabalho" name="sobreTrabalho" rows="3" maxlength="393"
                         placeholder="Fale em 1 linha sobre você ou seu trabalho">{{usuario.sobreTrabalho}}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Salvar</button>
