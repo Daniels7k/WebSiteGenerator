@@ -8,9 +8,26 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{#if user}}
+                </li>
+          <a class="nav-link active" aria-current="page" href="#"> <strong>Olá {{user.name}}</strong> </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/usuarios/todos">Ver todos os sites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/usuarios/meusite/{{user.usuario}}">Meu site</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/usuarios/meusite/{{user.usuario}}/edit">Editar meu
+            Site</a>
+                </li>
+          <a class="nav-link active" aria-current="page" href="/usuarios/logout"> <strong>Sair da conta</strong> </a>
+        </li>
+        {{else}}
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/usuarios/todos">Ver todos os sites</a>
         </li>
@@ -20,6 +37,7 @@
         <li class="nav-item">
           <a class="nav-link active" href="/usuarios/registro">Criar Conta</a>
         </li>
+        {{/if}}
       </ul>
     </div>
   </div>

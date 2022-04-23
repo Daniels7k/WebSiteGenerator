@@ -1,6 +1,8 @@
 //Modulos
 const mongoose = require("mongoose")
 const jwt = require("jsonwebtoken")
+const router = require("../routes/userRoute")
+const { cookie } = require("express/lib/response")
 require("../models/Usuario")
 const Usuario = mongoose.model("usuario")
 
@@ -31,7 +33,7 @@ function registroPost(req, res) {
                 senha: req.body.senha
 
             })
-            
+
             novoUsuario.save().then(() => {
                 req.flash("success_msg", "Cadastro feito com sucesso!")
                 res.redirect("/usuarios/login")
@@ -47,19 +49,19 @@ function registroPost(req, res) {
 
 
 //Login
-function loginGet (req, res) {
+function loginGet(req, res) {
     res.render("usuario/login")
 }
 
-function loginPost (req, res) {
+function loginPost(req, res) {
     //Verificando preexistencia de email
-    Usuario.findOne({email: req.body.email}).then((usuario) => {
-        if(!usuario){
+    Usuario.findOne({ email: req.body.email }).then((usuario) => {
+        if (!usuario) {
             req.flash("error_msg", "Este email não esta cadastrado, tente se cadastrar!")
             res.redirect("/usuarios/login")
-        }else{
+        } else {
             //Criando token de autorização
-            const token = jwt.sign({id:usuario.id}, "segredo")
+            const token = jwt.sign({ id: usuario.id, name: usuario.nome, usuario: usuario.usuario }, "segredo")
             res.cookie("authorizationToken", token)
             req.flash("success_msg", "Logado com sucesso")
             res.redirect(`/usuarios/meusite/${usuario.usuario}`)
@@ -72,4 +74,17 @@ function loginPost (req, res) {
     })
 }
 
-module.exports = { registroGet, registroPost, loginGet, loginPost }
+//Logout
+function logout(req, res) {
+    var cookie = req.cookies;
+    for (var prop in cookie) {
+        if (!cookie.hasOwnProperty(prop)) {
+            continue;
+        }    
+        res.cookie(prop, '', {expires: new Date(0)});
+    }
+    req.flash("success_msg", "Logout feito com sucesso!")
+    res.redirect('/bem-vindo');
+}
+
+module.exports = { registroGet, registroPost, loginGet, loginPost, logout }
