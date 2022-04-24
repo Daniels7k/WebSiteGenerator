@@ -1,25 +1,26 @@
+    <h3 class="container mt-4">Todos os Sites</h3>
+{{#each allUsers}}
 <div class="container mt-4">
-    <h3>Todos os Sites</h3>
-    {{#each allUsers}}
     <div class="container mt-3">
         <div class="card mt-4">
             <div class="card-body">
                 <div class="foto">
-                                    <img src="{{github}}.png" alt="">
+                    <img id="fotoMargin" src="{{github}}.png" alt="">
                 </div>
 
                 <div class="a1">
                     <div>
                         <h4 class="nome">{{nome}}</h4>
-
                         <h6 class="lead">{{profissao}}</h6>
                     </div>
+
                     <div class="q3">
-                        <p>{{sobreMim}}</p>
+                        <p class="sobremim">{{sobreMim}}</p>
                     </div>
 
                 </div>
-                <div class="q4 mt-2"><a href="/usuarios/meusite/{{usuario}}"><button class="btn btn-success">Ver Site</button></a></div>
+                <div class="q4 mt-2"><a href="/usuarios/meusite/{{usuario}}"><button class="btn btn-success">Ver
+                            Site</button></a></div>
             </div>
         </div>
     </div>
@@ -29,10 +30,48 @@
 
 
 <style>
-    .foto{
+    @media screen and (max-width: 1000px) {
+        .card-body {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #fotoMargin {
+            margin-right: 0px;
+        }
+
+        .foto {
+            justify-content: center;
+        }
+
+        .a1 {
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .q3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin: auto;
+        }
+
+        .q4 {
+            justify-content: center;
+        }
+
+        .sobremim {
+            height: 100px;
+        }
+    }
+
+    .foto {
         display: flex;
         align-items: center;
     }
+
     .q4 {
         display: flex;
         align-items: center;
@@ -51,12 +90,13 @@
         margin-left: 6px;
     }
 
-    img {
+    #fotoMargin {
         margin-right: 20px;
         width: 150px;
         height: 150px;
         border-radius: 10px;
     }
+
 
     p {
         margin: 0px
