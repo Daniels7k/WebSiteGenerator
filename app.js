@@ -64,6 +64,10 @@ app.get("/bem-vindo", getUser.getCookie, (req, res) => {
     res.render("index")
 })
 
+app.get("/bemvindo", getUser.getCookie, (req, res) => {
+    res.render("novoBemvindo")
+})
+
 app.use("/usuarios", getUser.getCookie ,userRouter )
 
 app.listen(PORT, () => {
