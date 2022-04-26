@@ -1,4 +1,3 @@
-const PORT = 3000;
 const express = require ("express");
 const { engine } = require("express-handlebars");
 const mongooose = require("mongoose")
@@ -70,6 +69,9 @@ app.get("/bemvindo", getUser.getCookie, (req, res) => {
 
 app.use("/usuarios", getUser.getCookie ,userRouter )
 
+
+//Outros
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server Running on Port:", PORT)
 })
