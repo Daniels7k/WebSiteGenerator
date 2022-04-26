@@ -46,6 +46,8 @@ node server.js
 ```
 E então acesse o site http//localhost:3000/
 
+## De uma olhada no projeto aqui: https://web-site-generator.herokuapp.com/bem-vindo
+
 ## Imagens
 
 ![](https://github.com/Daniels7k/Assets/blob/main/assets/WebSiteGenerator/perfil.png)
