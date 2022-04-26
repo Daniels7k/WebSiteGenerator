@@ -6,20 +6,27 @@
         <h5>Crie agora a sua própria página pessoal com <br> nome, profissão e contatos para apresentar <br>
             as outras empresas um resumo do seu perfil <br> e alavancar seus resultados.</h5>
     </div>
-            <a href="/usuarios/registro"><button class="btn1 btn btn-primary mt-5">Registro</button></a>
-            <a href="/usuarios/login"><button class="btn btn-primary mt-5">Login</button></a>
+    {{#if user}}
+    <a href="/usuarios/meusite/{{user.usuario}}/edit"><button class="btn1 btn btn-primary mt-5">Editar meu site</button></a>
+    <a href="/usuarios/todos"><button class="btn btn-primary mt-5">Ver todos os sites</button></a>
+    {{else}}
+    <a href="/usuarios/registro"><button class="btn1 btn btn-primary mt-5">Registro</button></a>
+    <a href="/usuarios/login"><button class="btn btn-primary mt-5">Login</button></a>
+    {{/if}}
 </div>
 
 
 <style>
-    .texto{
+    .texto {
         margin: auto;
         width: 30%;
     }
-    .btn1{
-                margin-right: 30px;
+
+    .btn1 {
+        margin-right: 30px;
     }
-    .btn  {
+
+    .btn {
         width: 150px;
 
         height: 75px;
@@ -32,7 +39,7 @@
     }
 
     @media screen and (max-width: 750px) {
-        .texto{
+        .texto {
             width: 80%;
         }
     }
