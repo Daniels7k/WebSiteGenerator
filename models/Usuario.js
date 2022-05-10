@@ -7,7 +7,7 @@ const Usuario = new Schema({
     email: { type: String, minlength:4, required: true},
     profissao: { type: String, minlength:3, required: true},
     linkedin: { type: String, required: true},
-    github: { type: String, required: true},
+    github: { type: String, required: false},
     sobreMim: { type: String, required: true},
     sobreTrabalho: { type: String, required: true},
     senha: { type: String, minlength:8, maxlength: 200},

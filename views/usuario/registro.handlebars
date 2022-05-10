@@ -9,37 +9,37 @@
                 <div class="form-group mt-2">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome"
-                        required>
+                        required value="{{dadosUsuario.nome}}">
                 </div>
                 {{!-- Usuario --}}
                 <div class="form-group mt-2">
                     <label for="nome">Usuario</label>
                     <input type="text" class="form-control" id="usuario" name="usuario"
-                        placeholder="Sera usado como parte do site!" required>
+                        placeholder="Sera usado como parte do site!" required value="{{dadosUsuario.usuario}}">
                 </div>
                 {{!-- Email --}}
                 <div class="form-group mt-2">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu email"
-                        required>
+                        required value="{{dadosUsuario.email}}">
                 </div>
                 {{!-- Profissao --}}
                 <div class="form-group mt-2">
                     <label for="profissao">Sua profissão</label>
                     <input type="text" class="form-control" id="profissao" name="profissao" required
-                        placeholder="Insira sua profissão">
+                        placeholder="Insira sua profissão" value="{{dadosUsuario.profissao}}">
                 </div>
                 {{!-- Linkedin --}}
                 <div class="form-group mt-2">
                     <label for="linkedin">Seu Linkedin</label>
                     <input type="text" class="form-control" id="linkedin" name="linkedin" required
-                        placeholder="Insira seu linkedin">
+                        placeholder="Insira seu linkedin" value="{{dadosUsuario.linkedin}}">
                 </div>
                 {{!-- Github --}}
                 <div class="form-group mt-2">
                     <label for="github">Seu Github</label>
-                    <input type="text" class="form-control" id="github" name="github" placeholder="Insira seu Github"
-                        required>
+                    <input type="text" class="form-control" id="github" name="github" placeholder="Insira seu Github (Se não tiver um não é necessário, mas seu perfil ficara sem foto)"
+                        value="{{dadosUsuario.github}}">
                     <small class="text-secondary">Por questões de armazenamento, sua foto de perfil será a mesma do seu
                         github</small>
                 </div>
@@ -47,13 +47,13 @@
                 <div class="form-group mt-2">
                     <label for="sobre">Sobre você </label>
                     <textarea class="form-control" id="sobreMim" name="sobreMim" rows="4"
-                        placeholder="Fale em 3 linhas sobre você" maxlength="661"></textarea required>
+                        placeholder="Fale em 3 linhas sobre você" maxlength="661">{{dadosUsuario.sobreMim}}</textarea required>
                 </div>
                 {{!-- Sobre o Trabalho --}}
                 <div class="form-group mt-2">
                     <label for="sobre">Sobre seu trabalho </label>
-                    <textarea class="form-control" id="sobreTrabalho" name="sobreTrabalho" rows="3" maxlength="393" required
-                        placeholder="Fale em 3 linhas sobre seu trabalho"></textarea>
+                    <textarea class="form-control" id="sobreTrabalho" name="sobreTrabalho" rows="3" maxlength="393" required 
+                        placeholder="Fale em 3 linhas sobre seu trabalho">{{dadosUsuario.sobreTrabalho}}</textarea>
                 </div>
                 {{!-- Senha --}}
                 <div class="form-group mt-2">

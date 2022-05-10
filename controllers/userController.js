@@ -14,18 +14,9 @@ function registroGet(req, res) {
 function registroPost(req, res) {
     //Verificando preexistência de email
     Usuario.findOne({ email: req.body.email }).then((verifiedEmail) => {
+
         if (verifiedEmail) {
-            req.flash("error_msg", "Este email já existe, tente outro!")
-            res.redirect("/usuarios/registro")
-        }
-        if (!verifiedEmail) {
-            Usuario.findOne({ usuario: req.body.usuario }).then((usuarioExistente) => {
-                req.flash("error_msg", "Este usuario já existe, tente outro!")
-                res.redirect("/usuarios/registro")
-            })
-        } else {
-            //Salvando no banco de dados
-            const novoUsuario = new Usuario({
+            const dadosUsuario = {
                 nome: req.body.nome,
                 usuario: req.body.usuario,
                 email: req.body.email,
@@ -34,18 +25,56 @@ function registroPost(req, res) {
                 github: req.body.github,
                 sobreMim: req.body.sobreMim,
                 sobreTrabalho: req.body.sobreTrabalho,
-                senha: bcrypt.hashSync(req.body.senha)
+                senha: req.body.senha
+            }
+            const error_msg = "Esse email já existe tente outro."
+            res.render("usuario/registro", { dadosUsuario, error_msg })
 
-            })
 
-            novoUsuario.save().then(() => {
-                req.flash("success_msg", "Cadastro feito com sucesso!")
-                res.redirect("/usuarios/login")
+        } else {
 
-            }).catch((error) => {
-                console.log(error)
-                req.flash("error_msg", "Houve um erro ao cadastrar, tente novamente!")
-                res.redirect("/usuarios/registro")
+            Usuario.findOne({ usuario: req.body.usuario }).then((usuarioExistente) => {
+
+                if (usuarioExistente) {
+                    const dadosUsuario = {
+                        nome: req.body.nome,
+                        usuario: req.body.usuario,
+                        email: req.body.email,
+                        profissao: req.body.profissao,
+                        linkedin: req.body.linkedin,
+                        github: req.body.github,
+                        sobreMim: req.body.sobreMim,
+                        sobreTrabalho: req.body.sobreTrabalho,
+                        senha: req.body.senha
+                    }
+                    const error_msg = "Esse usuário já existe tente outro."
+                    res.render("usuario/registro", { dadosUsuario, error_msg })
+                } else {
+
+                    //Salvando no banco de dados
+                    const novoUsuario = new Usuario({
+                        nome: req.body.nome,
+                        usuario: req.body.usuario,
+                        email: req.body.email,
+                        profissao: req.body.profissao,
+                        linkedin: req.body.linkedin,
+                        github: req.body.github,
+                        sobreMim: req.body.sobreMim,
+                        sobreTrabalho: req.body.sobreTrabalho,
+                        senha: bcrypt.hashSync(req.body.senha)
+
+                    })
+
+                    novoUsuario.save().then(() => {
+                        req.flash("success_msg", "Cadastro feito com sucesso!")
+                        res.redirect("/usuarios/login")
+
+                    }).catch((error) => {
+                        console.log(error)
+                        req.flash("error_msg", "Houve um erro ao cadastrar, tente novamente!")
+                        res.redirect("/usuarios/registro")
+                    })
+                }
             })
         }
     })
